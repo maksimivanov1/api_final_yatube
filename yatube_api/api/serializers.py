@@ -4,7 +4,6 @@ from rest_framework.validators import UniqueTogetherValidator
 from rest_framework.relations import SlugRelatedField
 
 
-
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
@@ -52,7 +51,7 @@ class FollowSerializer(serializers.ModelSerializer):
         )
 
     def validate(self, data):
-        if data['following'] == self.context['request'].user :
+        if data['following'] == self.context['request'].user:
             raise serializers.ValidationError(
                 'Нельзя подписаться на себя!'
             )
