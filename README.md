@@ -33,3 +33,27 @@
 >http://127.0.0.1:8000/api/v1/posts/
 2. (GET) Получить список всех групп:
 >http://127.0.0.1:8000/api/v1/groups/
+3. (POST) Добавление поста  .../api/v1/posts (for auth user):
+>{
+>    "text": "Test post.",
+>    "group": 1
+>}
+
+ Ответ:
+>{
+>    "id": 1,
+>    "author": "Bob",
+>    "text": "Test post.",
+>    "pub_date": "2022-11-11T19:43:54.531905Z",
+>    "image": null,
+>    "group": 1
+>}
+
+4. (GET) Получить информацию о группе .../api/v1/groups/1/
+ Ответ:
+>{
+>    "id": 1,
+>    "title": "Test group",
+>    "slug": "test_slug",
+>    "description": "Описание группы"
+>}
