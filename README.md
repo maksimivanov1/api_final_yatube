@@ -51,9 +51,11 @@
 
 4. (GET) Получить информацию о группе .../api/v1/groups/1/
  Ответ:
->{
->    "id": 1,
->    "title": "Test group",
->    "slug": "test_slug",
->    "description": "Описание группы"
->}
+```bash
+{
+    "id": 1,
+    "title": "Test group",
+    "slug": "test_slug",
+    "description": "Описание группы"
+}
+```
